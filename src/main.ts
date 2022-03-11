@@ -19,6 +19,9 @@ const table = new Table({
 });
 const data: { [key: string]: string[] } = {};
 
+if ((typeof options.bind) == 'string') {
+  options.bind = [options.bind]
+}
 options.bind.forEach((bindOpts: string) => {
   // Each --bind can have a comma separated list of key:action expressions.
   bindOpts.split(',').forEach((bindOpt: string) => {
