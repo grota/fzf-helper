@@ -21,7 +21,7 @@
     "test": "jest",
     "clean": "rm -rf dist build package",
     "ts-node": "ts-node",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && chmod a+x ./dist/tsc/main.js",
     "build-all": "yarn clean && yarn build"
   },
   "devDependencies": {
@@ -36,6 +36,7 @@
     "typescript": "^4.6.2"
   },
   "dependencies": {
+    "cli-table3": "^0.6.1",
     "getopts": "^2.3.0",
     "shellwords": "^1.0.1"
   }
